@@ -13,10 +13,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertTitle } from "@/components/ui/alert";
-<<<<<<< HEAD
-=======
-import { account } from "../../../../db/schema";
->>>>>>> b5903548f50f678436cf247dc7df069ec182fa89
+
 import {
   Form,
   FormControl,
@@ -71,11 +68,7 @@ export const SignUpView = () => {
           router.push("/");
         },
         onError: ({ error }) => {
-<<<<<<< HEAD
           setPending(false);
-=======
-          setPending(false); // <-- Fix is here
->>>>>>> b5903548f50f678436cf247dc7df069ec182fa89
           setError(error.message);
         },
       }
@@ -83,7 +76,6 @@ export const SignUpView = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen flex items-center justify-center bg-muted px-4 py-8">
       <div className="w-full max-w-4xl">
         <Card className="overflow-hidden">
@@ -243,147 +235,6 @@ export const SignUpView = () => {
           By clicking continue, you agree to our{" "}
           <a href="#">Terms of Services</a> and <a href="#">Privacy Policy</a>
         </div>
-=======
-    <div className="flex flex-col gap-6">
-      <Card className="overflow-hidden p-0">
-        <CardContent className="grid p-0 md:grid-cols-2">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 md:p-8">
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col items-center text-center">
-                  <h1 className="text-2xl font-bold">Let&apos;s get started</h1>
-                  <p className="text-balance text-muted-foreground">
-                    Create your account
-                  </p>
-                </div>
-                <div className="grid gap-3">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="text"
-                            placeholder="John Doe"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            placeholder="m@example.com"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="password"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Password</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="password"
-                            placeholder="********"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="confirmPassword"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Confirm Password</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="password"
-                            placeholder="********"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                {!!error && (
-                  <Alert className="bg-destructive/10 border-none">
-                    <OctagonAlertIcon className="h-4 w-4 !text-destructive" />
-                    <AlertTitle>{error}</AlertTitle>
-                  </Alert>
-                )}
-                <Button disabled={pending} type="submit" className="w-full">
-                  Sign in
-                </Button>
-                <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
-                  <span className="bg-card text-muted-foreground relative z-10 px-2">
-                    Or continue with
-                  </span>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <Button
-                    disabled={pending}
-                    variant="outline"
-                    type="button"
-                    className="w-full"
-                  >
-                    Google
-                  </Button>
-                  <Button
-                    disabled={pending}
-                    variant="outline"
-                    type="button"
-                    className="w-full"
-                  >
-                    Github
-                  </Button>
-                </div>
-                <div className="text-center text-sm">
-                  Already have an account?{" "}
-                  <Link
-                    href="/sign-in"
-                    className="underline underline-offset-4"
-                  >
-                    Sign in
-                  </Link>
-                </div>
-              </div>
-            </form>
-          </Form>
-
-          <div className="bg-radial from-green-700 to-green-900 relative hidden md:flex flex-col gap-y-4 items-center justify-center">
-            <img src="/logo.svg" alt="Img" className="h-[92px] w-[92px] mb-4" />
-            <p className="text-2xl font-semibold text-white">Meet.AI</p>
-          </div>
-        </CardContent>
-      </Card>
-
-      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our <a href="#">Terms of Services</a>{" "}
-        and <a href="#">Privacy Policy</a>
->>>>>>> b5903548f50f678436cf247dc7df069ec182fa89
       </div>
     </div>
   );
