@@ -246,7 +246,7 @@ export const SignUpView = () => {
             </Form>
 
             {/* Right Banner Section */}
-            <div className="bg-radial from-green-700 to-green-900 hidden md:flex flex-col gap-y-4 items-center justify-center p-8">
+            <div className="bg-radial from-sidebar-accent to-sidebar hidden md:flex flex-col gap-y-4 items-center justify-center p-8">
               <img
                 src="/logo.svg"
                 alt="Img"
