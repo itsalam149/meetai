@@ -17,7 +17,7 @@ export const CallUI = ({ meetingName }: Props) => {
     if (!call) return;
 
     await call.join();
-
+    await call.microphone.enable();
     setShow("call");
   };
 
