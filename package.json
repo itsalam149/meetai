@@ -10,7 +10,7 @@
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "dev:webhook": "ngrok http --url=privately-cool-doberman.ngrok-free.app 3000",
-    "postinstall": "npm install --legacy-peer-deps"
+    "postinstall": "[[ ! $SKIP_POSTINSTALL ]] && npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@dicebear/collection": "^9.2.2",
